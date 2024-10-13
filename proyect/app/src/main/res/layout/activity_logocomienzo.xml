@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomain"
+    tools:context=".logocomienzo">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="330dp"
+        android:layout_height="258dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logounop" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+
+        android:fontFamily="@font/angkor"
+        android:padding="16dp"
+
+        android:shadowColor="@color/color9"
+        android:shadowDx="5"
+        android:shadowDy="12"
+        android:shadowRadius="10"
+        android:text="Sweet Home"
+        android:textAlignment="center"
+        android:textColor="@color/color6"
+        android:textSize="40sp" />
+</RelativeLayout>

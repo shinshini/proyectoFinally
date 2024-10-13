@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color1">#D2FF72</color>
+    <color name="color2">#73EC8B</color>
+    <color name="color3">#15B392</color>
+    <color name="color4">#00CCDD</color>
+    <color name="color5">#7CF5FF</color>
+    <color name="color6">#C7FFD8</color>
+    <color name="color7">#48CFCB</color>
+    <color name="color8">#9DBDFF</color>
+    <color name="color9">#36C2CE</color>
+    <color name="color10">#009FBD</color>
+    <color name="color11">#D91656</color>
+
+    <color name="color12">#7E60BF</color>
+    <color name="color13">#4F75FF</color>
+    <color name="color14">#87A2FF</color>
+    <color name="color15">#6256CA</color>
+    <color name="color16">#604CC3</color>
+
+    <color name="color17">#800000</color>
+    <color name="color18">#EF5A6F</color>
+    <color name="color19">#C80036</color>
+    <color name="color20">#FFB1B1</color>
+    <color name="color21">#FF0000</color>
+
+    <color name="color22">#97BE5A</color>
+    <color name="color23">#FA7070</color>
+    <color name="color24">#CA8787</color>
+    <color name="color25">#FF9F66</color>
+    <color name="color26">#FF5F00</color>
+
+
+    <color name="color27">#ECB176</color>
+    <color name="color28">#A67B5B</color>
+    <color name="color29">#FED8B1</color>
+    <color name="color30">#6F4E37</color>
+    <color name="color31">#543310</color>
+
+    <color name="color32">#FA7070</color>
+    <color name="color33">#5755FE</color>
+    <color name="color34">#401F71</color>
+    <color name="color35">#4CCD99</color>
+    <color name="color36">#FEC7B4</color>
+
+    <color name="color37">#F6995C</color>
+    <color name="color38">#E1AFD1</color>
+    <color name="color39">#C5EBAA</color>
+    <color name="color40">#FFF67E</color>
+    <color name="color41">#9AD0C2</color>
+
+    <color name="color42">#A2FF86</color>
+    <color name="color43">#16FF00</color>
+    <color name="color44">#03C988</color>
+    <color name="color45">#B3FFAE</color>
+    <color name="color46">#38E54D</color>
+
+    <color name="color47">#347928</color>
+    <color name="color48">#0A6847</color>
+    <color name="color49">#004225</color>
+    <color name="color50">#62760C</color>
+    <color name="color51">#059212</color>
+</resources>
