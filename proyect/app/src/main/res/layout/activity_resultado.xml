@@ -41,6 +41,23 @@
             android:text="Recalcular"
             android:layout_marginTop="32dp" />
 
+        <TextView
+            android:id="@+id/sugerenciaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aquí aparecerá tu sugerencia"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/planButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver Planificación Alimenticia"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

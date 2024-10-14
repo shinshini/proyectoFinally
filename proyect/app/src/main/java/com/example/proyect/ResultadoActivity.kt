@@ -1,6 +1,8 @@
 package com.example.proyect
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 class ResultadoActivity : AppCompatActivity() {
 
     private lateinit var viewModel: UsuarioViewModel
+    private lateinit var objetivo: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +24,41 @@ class ResultadoActivity : AppCompatActivity() {
         val peso = intent.getFloatExtra("peso", 0f)
         val estatura = intent.getFloatExtra("estatura", 0f)
 
+        // Calcular el IMC
         val imc = viewModel.calcularIMC(peso, estatura)
-        val clasificacion = viewModel.obtenerClasificacionIMC(imc)
 
+        // Mostrar el IMC en el TextView
         findViewById<TextView>(R.id.imcTextView).text = "Tu IMC es: $imc"
-        findViewById<TextView>(R.id.clasificacionTextView).text = "Clasificación: $clasificacion"
+
+        // Obtener el objetivo basado en el IMC
+        objetivo = obtenerSugerenciaObjetivo(imc)
+
+        // Mostrar la sugerencia al usuario
+        findViewById<TextView>(R.id.sugerenciaTextView).text = when (objetivo) {
+            "subir" -> "Te sugerimos aumentar tu peso de manera saludable."
+            "mantener" -> "Tu peso es adecuado. Te sugerimos mantenerlo."
+            "bajar" -> "Te sugerimos bajar de peso de manera saludable."
+            else -> "Consulta con un especialista para obtener recomendaciones personalizadas."
+        }
+
+
+        // Configurar el botón para ver la planificación
+        val planButton = findViewById<Button>(R.id.planButton)
+        planButton.setOnClickListener {
+            // Lanzar PlanificacionActivity pasando el objetivo como extra
+            val intent = Intent(this, PlanificacionActivity::class.java)
+            intent.putExtra("objetivo", objetivo)
+            startActivity(intent)
+        }
+    }
+
+    private fun obtenerSugerenciaObjetivo(imc: Float): String {
+        return when {
+            imc < 18.5 -> "subir"  // Bajo peso
+            imc in 18.5..24.9 -> "mantener"  // Peso normal
+            imc in 25.0..29.9 -> "bajar"  // Sobrepeso
+            imc >= 30.0 -> "bajar"  // Obesidad
+            else -> "mantener"
+        }
     }
 }
