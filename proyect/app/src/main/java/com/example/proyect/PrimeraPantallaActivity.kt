@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
@@ -25,20 +26,34 @@ class PrimeraPantallaActivity : AppCompatActivity() {
         val siguienteButton = findViewById<Button>(R.id.siguienteButton)
 
         siguienteButton.setOnClickListener {
-            val nombre = nombreInput.text.toString()
-            val genero = when (generoRadioGroup.checkedRadioButtonId) {
-                R.id.radioHombre -> "Hombre"
-                R.id.radioMujer -> "Mujer"
-                else -> "Otro"
-            }
-            val fechaNacimiento = "${fechaNacimientoPicker.dayOfMonth}/${fechaNacimientoPicker.month + 1}/${fechaNacimientoPicker.year}"
+            try {
+                val nombre = nombreInput.text.toString().trim()
+                if (nombre.isEmpty()) {
+                    throw IllegalArgumentException("El nombre no puede estar vacío.")
+                }
 
-            // Pasar los datos a la siguiente pantalla
-            val intent = Intent(this, SegundaPantallaActivity::class.java)
-            intent.putExtra("nombre", nombre)
-            intent.putExtra("genero", genero)
-            intent.putExtra("fechaNacimiento", fechaNacimiento)
-            startActivity(intent)
+                val genero = when (generoRadioGroup.checkedRadioButtonId) {
+                    R.id.radioHombre -> "Hombre"
+                    R.id.radioMujer -> "Mujer"
+                    else -> "Otro"
+                }
+
+                val fechaNacimiento = "${fechaNacimientoPicker.dayOfMonth}/${fechaNacimientoPicker.month + 1}/${fechaNacimientoPicker.year}"
+
+                // Pasar los datos a la siguiente pantalla
+                val intent = Intent(this, SegundaPantallaActivity::class.java)
+                intent.putExtra("nombre", nombre)
+                intent.putExtra("genero", genero)
+                intent.putExtra("fechaNacimiento", fechaNacimiento)
+                startActivity(intent)
+
+            } catch (e: IllegalArgumentException) {
+                // Mostrar un mensaje de error si los datos no son válidos
+                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                // Manejar cualquier otra excepción
+                Toast.makeText(this, "Error inesperado: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

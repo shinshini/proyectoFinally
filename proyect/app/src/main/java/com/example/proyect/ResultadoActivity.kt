@@ -4,10 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 
 class ResultadoActivity : AppCompatActivity() {
@@ -30,7 +27,7 @@ class ResultadoActivity : AppCompatActivity() {
         // Mostrar el IMC en el TextView
         findViewById<TextView>(R.id.imcTextView).text = "Tu IMC es: $imc"
 
-        // Obtener el objetivo basado en el IMC
+        // Obtener la sugerencia de objetivo basada en el IMC
         objetivo = obtenerSugerenciaObjetivo(imc)
 
         // Mostrar la sugerencia al usuario
@@ -41,6 +38,9 @@ class ResultadoActivity : AppCompatActivity() {
             else -> "Consulta con un especialista para obtener recomendaciones personalizadas."
         }
 
+        // Mostrar la clasificación del IMC
+        val clasificacionTextView = findViewById<TextView>(R.id.clasificacionTextView)
+        clasificacionTextView.text = "Clasificación: ${obtenerClasificacion(imc)}"
 
         // Configurar el botón para ver la planificación
         val planButton = findViewById<Button>(R.id.planButton)
@@ -59,6 +59,16 @@ class ResultadoActivity : AppCompatActivity() {
             imc in 25.0..29.9 -> "bajar"  // Sobrepeso
             imc >= 30.0 -> "bajar"  // Obesidad
             else -> "mantener"
+        }
+    }
+
+    private fun obtenerClasificacion(imc: Float): String {
+        return when {
+            imc < 18.5 -> "Bajo peso"
+            imc in 18.5..24.9 -> "Normal"
+            imc in 25.0..29.9 -> "Sobrepeso"
+            imc >= 30.0 -> "Obesidad"
+            else -> "Indeterminado"
         }
     }
 }

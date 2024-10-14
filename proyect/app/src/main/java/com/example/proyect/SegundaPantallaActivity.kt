@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 
 class SegundaPantallaActivity : AppCompatActivity() {
@@ -25,20 +23,41 @@ class SegundaPantallaActivity : AppCompatActivity() {
         val finalizarButton = findViewById<Button>(R.id.finalizarButton)
 
         finalizarButton.setOnClickListener {
-            val nombre = intent.getStringExtra("nombre")!!
-            val genero = intent.getStringExtra("genero")!!
-            val fechaNacimiento = intent.getStringExtra("fechaNacimiento")!!
-            val estatura = estaturaInput.text.toString().toFloat()
-            val peso = pesoInput.text.toString().toFloat()
+            try {
+                val nombre = intent.getStringExtra("nombre") ?: throw IllegalArgumentException("Nombre no disponible")
+                val genero = intent.getStringExtra("genero") ?: throw IllegalArgumentException("Género no disponible")
+                val fechaNacimiento = intent.getStringExtra("fechaNacimiento") ?: throw IllegalArgumentException("Fecha de nacimiento no disponible")
 
-            // Guardar el usuario en el ViewModel y Base de Datos
-            viewModel.guardarUsuario(nombre, genero, fechaNacimiento, estatura, peso)
+                // Validar estatura
+                val estaturaString = estaturaInput.text.toString()
+                if (estaturaString.isEmpty()) {
+                    throw IllegalArgumentException("La estatura no puede estar vacía.")
+                }
+                val estatura = estaturaString.toFloatOrNull() ?: throw IllegalArgumentException("La estatura debe ser un número válido.")
 
-            // Ir a la pantalla de resultados
-            val intent = Intent(this, ResultadoActivity::class.java)
-            intent.putExtra("peso", peso)
-            intent.putExtra("estatura", estatura)
-            startActivity(intent)
+                // Validar peso
+                val pesoString = pesoInput.text.toString()
+                if (pesoString.isEmpty()) {
+                    throw IllegalArgumentException("El peso no puede estar vacío.")
+                }
+                val peso = pesoString.toFloatOrNull() ?: throw IllegalArgumentException("El peso debe ser un número válido.")
+
+                // Guardar el usuario en el ViewModel y Base de Datos
+                viewModel.guardarUsuario(nombre, genero, fechaNacimiento, estatura, peso)
+
+                // Ir a la pantalla de resultados
+                val intent = Intent(this, ResultadoActivity::class.java)
+                intent.putExtra("peso", peso)
+                intent.putExtra("estatura", estatura)
+                startActivity(intent)
+
+            } catch (e: IllegalArgumentException) {
+                // Mostrar un mensaje de error si los datos no son válidos
+                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                // Manejar cualquier otra excepción
+                Toast.makeText(this, "Error inesperado: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
