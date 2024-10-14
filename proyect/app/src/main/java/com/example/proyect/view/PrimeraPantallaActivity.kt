@@ -1,4 +1,4 @@
-package com.example.proyect
+package com.example.proyect.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.proyect.R
+import com.example.proyect.viewmodel.UsuarioViewModel
 
 class PrimeraPantallaActivity : AppCompatActivity() {
 

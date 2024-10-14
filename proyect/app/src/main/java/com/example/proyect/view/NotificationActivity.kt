@@ -1,10 +1,7 @@
-package com.example.proyect
+package com.example.proyect.view
 
 import android.Manifest
-import android.app.AlarmManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -15,12 +12,16 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.example.proyect.utils.AlarmaReceiver
+import com.example.proyect.R
 import java.util.*
 
 class NotificationActivity : AppCompatActivity() {
 
     private val PERMISO_NOTIFICACION = 1
+    private val ZONA_HORARIA_BOLIVIA = "America/La_Paz"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +39,19 @@ class NotificationActivity : AppCompatActivity() {
         // Botón para configurar las notificaciones
         val configurarButton: Button = findViewById(R.id.configurarNotificacionesButton)
         val confirmationMessage: TextView = findViewById(R.id.confirmationMessage)
+        val irAPlanificacionButton: Button = findViewById(R.id.irAPlanificacionButton)
 
         // Cuando el usuario haga clic en el botón, se configurarán las notificaciones
         configurarButton.setOnClickListener {
             programarAlarmasPorDiaYObjetivo(objetivo)
             confirmationMessage.text = "Notificaciones configuradas para el objetivo: $objetivo"
+            // Mostrar el botón para ir a Planificación
+            irAPlanificacionButton.visibility = Button.VISIBLE
+        }
+        irAPlanificacionButton.setOnClickListener {
+            val intentPlanificacion = Intent(this, PlanificacionActivity::class.java)
+            startActivity(intentPlanificacion)
+            finish() // Cierra la actividad actual
         }
     }
 
@@ -72,7 +81,7 @@ class NotificationActivity : AppCompatActivity() {
         }
     }
 
-    // Programar alarmas para cada día de la semana y objetivo
+    // Programar alarmas para cada día de la semana y objetivo, ajustando a la zona horaria boliviana (UTC-4)
     private fun programarAlarmasPorDiaYObjetivo(objetivo: String) {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val diasDeLaSemana = listOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
@@ -82,11 +91,11 @@ class NotificationActivity : AppCompatActivity() {
             programarAlarmaDiaria("Desayuno $dia", "Es hora del desayuno ($dia). Objetivo: $objetivo", 8, 0, 1000 + index * 4 + 1, alarmManager, index)
             programarAlarmaDiaria("Merienda $dia", "Es hora de la merienda ($dia). Objetivo: $objetivo", 10, 30, 1000 + index * 4 + 2, alarmManager, index)
             programarAlarmaDiaria("Almuerzo $dia", "Es hora del almuerzo ($dia). Objetivo: $objetivo", 12, 30, 1000 + index * 4 + 3, alarmManager, index)
-            programarAlarmaDiaria("Cena $dia", "Es hora de la cena ($dia). Objetivo: $objetivo", 19, 0, 1000 + index * 4 + 4, alarmManager, index)
+            programarAlarmaDiaria("Cena $dia", "Es hora de la cena ($dia). Objetivo: $objetivo", 19, 30, 1000 + index * 4 + 4, alarmManager, index)
         }
     }
 
-    // Función para programar una alarma diaria
+    // Función para programar una alarma diaria con la hora de Bolivia (UTC-4) y notificación permanente
     private fun programarAlarmaDiaria(titulo: String, mensaje: String, hora: Int, minuto: Int, requestCode: Int, alarmManager: AlarmManager, diaDeLaSemana: Int) {
         val intent = Intent(this, AlarmaReceiver::class.java).apply {
             putExtra("titulo", titulo)
@@ -95,7 +104,8 @@ class NotificationActivity : AppCompatActivity() {
 
         val pendingIntent = PendingIntent.getBroadcast(this, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
 
-        val calendar = Calendar.getInstance().apply {
+        // Configura el calendario en la hora boliviana (UTC-4)
+        val calendar = Calendar.getInstance(TimeZone.getTimeZone(ZONA_HORARIA_BOLIVIA)).apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.DAY_OF_WEEK, Calendar.MONDAY + diaDeLaSemana) // Configura el día de la semana
             set(Calendar.HOUR_OF_DAY, hora)

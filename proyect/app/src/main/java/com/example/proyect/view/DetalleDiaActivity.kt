@@ -1,11 +1,11 @@
-package com.example.proyect
+package com.example.proyect.view
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.proyect.R
 
 class DetalleDiaActivity : AppCompatActivity() {
 
@@ -35,6 +35,14 @@ class DetalleDiaActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.cenaTextView).text = "Cena: ${planDia.cena}"
         findViewById<TextView>(R.id.cenaRecetaTextView).text = "Receta: ${planDia.recetaCena}"
+
+        // Botón para volver a la planificación
+        val volverButton = findViewById<Button>(R.id.volverAPlanificacionButton)
+        volverButton.setOnClickListener {
+            val intentPlanificacion = Intent(this, PlanificacionActivity::class.java)
+            startActivity(intentPlanificacion)
+            finish()
+        }
     }
 
     private fun obtenerPlanDelDia(dia: String, objetivo: String): PlanDia {

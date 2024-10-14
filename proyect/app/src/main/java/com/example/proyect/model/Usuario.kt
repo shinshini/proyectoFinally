@@ -1,4 +1,4 @@
-package com.example.proyect
+package com.example.proyect.model
 
 data class Usuario (
     val nombre: String,

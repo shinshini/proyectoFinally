@@ -1,4 +1,4 @@
-package com.example.proyect
+package com.example.proyect.utils
 
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
+import com.example.proyect.R
+import com.example.proyect.view.PlanificacionActivity
 
 class AlarmaReceiver : BroadcastReceiver() {
 

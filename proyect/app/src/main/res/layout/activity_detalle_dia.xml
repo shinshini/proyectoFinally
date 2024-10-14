@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleDiaActivity">
+    tools:context=".view.DetalleDiaActivity">
 
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -128,6 +128,14 @@
                 android:text="Receta: Precalienta el horno a 180°C. Hornea un filete de pescado con hierbas y aceite de oliva por 20 minutos. Sirve con una ensalada de lechuga y tomate."
                 android:textSize="14sp"
                 android:paddingBottom="16dp" />
+            <!-- Botón para volver a Planificación -->
+            <Button
+                android:id="@+id/volverAPlanificacionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver a Planificación"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="16dp" />
 
         </LinearLayout>
     </ScrollView>

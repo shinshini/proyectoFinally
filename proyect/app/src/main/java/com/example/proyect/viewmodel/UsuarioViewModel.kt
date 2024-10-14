@@ -1,16 +1,12 @@
-package com.example.proyect
+package com.example.proyect.viewmodel
 
 import android.app.Application
 import android.content.ContentValues
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.example.proyect.utils.SQLiteHelper
+import com.example.proyect.model.Usuario
 
 class UsuarioViewModel(application: Application) : AndroidViewModel(application) {
 
