@@ -3,6 +3,7 @@ package com.example.proyect
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -36,8 +37,17 @@ class PlanificacionActivity : AppCompatActivity() {
             intent.putExtra("objetivo", objetivo)
             startActivity(intent)
         }
-
-
+        // Botón para activar notificaciones
+        val btnNotificaciones = findViewById<Button>(R.id.btnNotificaciones)
+        btnNotificaciones.setOnClickListener {
+            iniciarNotificaciones(objetivo ?: "mantener")
+        }
     }
 
+    // Función para iniciar las notificaciones
+    private fun iniciarNotificaciones(objetivo: String) {
+        val intent = Intent(this, NotificationActivity::class.java)
+        intent.putExtra("objetivo", objetivo)
+        startActivity(intent)
+    }
 }

@@ -17,5 +17,12 @@
             android:id="@+id/planificacionListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnNotificaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activar Notificaciones"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

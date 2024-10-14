@@ -4,12 +4,20 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/notificationMessage"
+    <Button
+        android:id="@+id/configurarNotificacionesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Configurando notificaciones..."
-        android:textSize="18sp"
-        android:textColor="@android:color/black" />
+        android:text="Configurar Notificaciones"
+        android:layout_centerInParent="true" />
 
+    <TextView
+        android:id="@+id/confirmationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:layout_below="@id/configurarNotificacionesButton"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/holo_green_dark" />
 </RelativeLayout>

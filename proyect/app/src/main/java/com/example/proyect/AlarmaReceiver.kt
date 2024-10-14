@@ -5,28 +5,35 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.core.app.NotificationCompat
 
 class AlarmaReceiver : BroadcastReceiver() {
-    override fun onReceive(context: Context, intent: Intent) {
-        // Obtén el título y el mensaje de la notificación
-        val titulo = intent.getStringExtra("titulo") ?: "Recordatorio"
-        val mensaje = intent.getStringExtra("mensaje") ?: "Es hora de tu comida."
 
-        // Crear la notificación
+    override fun onReceive(context: Context, intent: Intent) {
+        // Extraer el título y mensaje de la notificación desde el intent
+        val titulo = intent.getStringExtra("Sweet Home") ?: "Recordatorio"
+        val mensaje = intent.getStringExtra("Debes consumir a la hora tu alimento porfavor") ?: "Es hora de tu comida"
+
+        // Crear un intent para abrir la actividad cuando se haga clic en la notificación
+        val notificationIntent = Intent(context, PlanificacionActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(
+            context, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        // Crear el objeto Notification
         val notification = NotificationCompat.Builder(context, "alimentacionChannel")
-            .setSmallIcon(R.drawable.logounop) // Cambia esto por tu ícono
+            .setSmallIcon(R.drawable.fondomain)  // Puedes personalizar este ícono
             .setContentTitle(titulo)
             .setContentText(mensaje)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)  // Acción cuando el usuario toca la notificación
+            .setAutoCancel(true)  // La notificación desaparece cuando el usuario la toca
             .build()
 
         // Obtener el NotificationManager
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         // Mostrar la notificación
-        notificationManager.notify((System.currentTimeMillis() % 1000).toInt(), notification)
+        val notificationId = (System.currentTimeMillis() % 1000).toInt()  // Genera un ID único para cada notificación
+        notificationManager.notify(notificationId, notification)  // Aquí se muestra la notificación
     }
 }
