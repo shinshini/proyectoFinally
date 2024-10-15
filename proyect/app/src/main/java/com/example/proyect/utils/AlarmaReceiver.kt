@@ -13,8 +13,8 @@ class AlarmaReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         // Extraer el título y mensaje de la notificación desde el intent
-        val titulo = intent.getStringExtra("Sweet Home") ?: "Recordatorio"
-        val mensaje = intent.getStringExtra("Debes consumir a la hora tu alimento porfavor") ?: "Es hora de tu comida"
+        val titulo = intent.getStringExtra("Sweet Home") ?: "Sweet Home: Recordatorio"
+        val mensaje = intent.getStringExtra("Debes consumir a la hora tu alimento porfavor") ?: "Es hora de nutrir tu cuerpo a la hora exacta"
 
         // Crear un intent para abrir la actividad cuando se haga clic en la notificación
         val notificationIntent = Intent(context, PlanificacionActivity::class.java)
@@ -24,7 +24,7 @@ class AlarmaReceiver : BroadcastReceiver() {
 
         // Crear el objeto Notification
         val notification = NotificationCompat.Builder(context, "alimentacionChannel")
-            .setSmallIcon(R.drawable.fondomain)  // Puedes personalizar este ícono
+            .setSmallIcon(R.drawable.logocel)  // Puedes personalizar este ícono
             .setContentTitle(titulo)
             .setContentText(mensaje)
             .setContentIntent(pendingIntent)  // Acción cuando el usuario toca la notificación

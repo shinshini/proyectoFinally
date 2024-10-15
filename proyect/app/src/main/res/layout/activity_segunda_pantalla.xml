@@ -5,52 +5,90 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondore"
     tools:context=".view.SegundaPantallaActivity">
 
+    <!-- Botón Finalizar -->
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/baloo_bhaijaan"
+            android:text="Registra tus datos personales"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
 
         <!-- Estatura del Usuario -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Estatura (en metros)" />
+            android:fontFamily="@font/archivo_black"
+            android:text="Estatura (en metros)"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/estaturaInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_background"
+            android:contentDescription="Campo de texto para estatura"
             android:hint="Ej: 1.75"
+            android:importantForAccessibility="yes"
+            android:inputType="numberDecimal"
             android:padding="12dp" />
 
         <!-- Peso del Usuario -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/archivo_black"
             android:text="Peso (en kilogramos)"
-            android:layout_marginTop="16dp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/pesoInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_background"
+            android:contentDescription="Campo de texto para peso"
             android:hint="Ej: 70"
+            android:importantForAccessibility="yes"
+            android:inputType="numberDecimal"
             android:padding="12dp" />
 
-        <!-- Botón Finalizar -->
-        <Button
-            android:id="@+id/finalizarButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Finalizar"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/finalizarButton"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#96085897"
+        android:text="Finalizar"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
