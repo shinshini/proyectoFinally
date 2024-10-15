@@ -1,5 +1,7 @@
 package com.example.proyect.view
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,15 @@ class DetalleDiaActivity : AppCompatActivity() {
 
         // Mostrar los datos en la UI
         mostrarPlanComidas(planDia, dia)
+
+        val volverButton: Button = findViewById(R.id.volverAPlanificacionButton)
+        volverButton.setOnClickListener {
+            // Iniciar la actividad de "Planificación"
+            val intent = Intent(this, PlanificacionActivity::class.java)
+            startActivity(intent)
+            // Opcional: finalizar la actividad actual si no quieres que el usuario pueda volver a esta
+            finish()
+        }
     }
 
     private fun mostrarPlanComidas(planDia: PlanDia, dia: String) {
@@ -72,47 +83,55 @@ class DetalleDiaActivity : AppCompatActivity() {
                 Receta(
                     " Tortilla de Espinacas y Queso",
                     R.drawable.tortilla,
-                    "Ingredientes: 3 huevos\n" +
+                    "Ingredientes:\n " +
+                            "3 huevos\n" +
                             "1 taza de espinacas frescas\n" +
                             "1/2 taza de queso cheddar rallado\n" +
                             "1 cucharada de aceite de oliva\n" +
                             "Sal y pimienta al gusto",
-                    "Bate los huevos en un tazón y añade sal y pimienta.\n" +
-                            "Calienta el aceite en una sartén a fuego medio y añade las espinacas hasta que se marchiten.\n" +
-                            "Agrega los huevos batidos y cocina por unos minutos.\n" +
-                            "Espolvorea el queso por encima y cocina hasta que los huevos estén firmes y el queso se derrita."
+                    "Preparacion:" +
+                            "1.- Bate los huevos en un tazón y añade sal y pimienta.\n" +
+                            "2.- Calienta el aceite en una sartén a fuego medio y añade las espinacas hasta que se marchiten.\n" +
+                            "3.- Agrega los huevos batidos y cocina por unos minutos.\n" +
+                            "4.- Espolvorea el queso por encima y cocina hasta que los huevos estén firmes y el queso se derrita."
                 ),
                 Receta(
                     "Batido de Plátano y Mantequilla de Maní",
                     R.drawable.plamani,
-                    "Ingredientes: 1 plátano\n" +
+                    "Ingredientes:\n" +
+                            " 1 plátano\n" +
                             "2 cucharadas de mantequilla de maní\n" +
                             "1 taza de leche (puede ser entera o de almendra)\n" +
                             "1 cucharada de miel",
-                    "En una licuadora, mezcla el plátano, la mantequilla de maní, la leche y la miel.\n" +
+                    "Preparacion:\n" +
+                            "En una licuadora, mezcla el plátano, la mantequilla de maní, la leche y la miel.\n" +
                             "Licúa hasta obtener una mezcla homogénea y cremosa.\n" +
                             "Sirve frío."
                 ),
                 Receta(
                     "Ensalada de Pollo con Palta y Nueces",
                     R.drawable.ensapollo,
-                    "Ingredientes: 1 pechuga de pollo a la parrilla, en trozos\n" +
+                    "Ingredientes: \n" +
+                            "1 pechuga de pollo a la parrilla, en trozos\n" +
                             "1 Palta, en cubos\n" +
                             "1/2 taza de nueces\n" +
                             "2 tazas de lechuga mixta\n" +
                             "Aderezo de aceite de oliva y vinagre",
-                    "En un tazón grande, combina la lechuga, el pollo, el aguacate y las nueces.\n" +
-                            "Rocía el aderezo por encima y mezcla suavemente para no aplastar el aguacate"
+                    "Preparacion: \n" +
+                            "1.-En un tazón grande, combina la lechuga, el pollo, el aguacate y las nueces.\n" +
+                            "2.-Rocía el aderezo por encima y mezcla suavemente para no aplastar el aguacate"
                 ),
                 Receta(
                     "Pasta con Salsa de Tomate y Albóndigas",
                     R.drawable.pastatoma,
-                    "Ingredientes: 200 g de pasta (espagueti o la que prefieras)\n" +
+                    "Ingredientes:\n" +
+                            " 200 g de pasta (espagueti o la que prefieras)\n" +
                             "1 taza de salsa de tomate\n" +
                             "4 albóndigas de carne (pueden ser compradas o caseras)\n" +
                             "1 cucharada de aceite de oliva\n" +
                             "Queso parmesano rallado para servir",
-                    "Cocina la pasta según las instrucciones del paquete.\n" +
+                    "Preparacion \n" +
+                            "Cocina la pasta según las instrucciones del paquete.\n" +
                             "Mientras se cocina, calienta el aceite en una sartén y agrega las albóndigas hasta que estén doradas.\n" +
                             "Añade la salsa de tomate y cocina a fuego lento durante 10 minutos.\n" +
                             "Sirve la pasta con la salsa y las albóndigas, espolvoreando queso parmesano por encima."
@@ -123,42 +142,49 @@ class DetalleDiaActivity : AppCompatActivity() {
                 Receta(
                     "Panqueques de Avena y Plátano",
                     R.drawable.panqueavena,
-                    "1 taza de avena\n" +
+                    "Ingredientes:\n" +
+                            "1 taza de avena\n" +
                             "2 plátanos maduros\n" +
                             "2 huevos\n" +
                             "1/2 taza de leche\n" +
                             "1 cucharadita de polvo para hornear",
-                    "En un tazón, mezcla la avena, los plátanos, los huevos, la leche y el polvo para hornear hasta obtener una mezcla homogénea.\n" +
-                            "Calienta una sartén a fuego medio y vierte un poco de la mezcla para formar los panqueques.\n" +
-                            "Cocina hasta que se formen burbujas en la superficie, luego voltea y cocina el otro lado.\n" +
-                            "Sirve con miel o jarabe de arce."
+                    "Preparacion:\n" +
+                            "1.-En un tazón, mezcla la avena, los plátanos, los huevos, la leche y el polvo para hornear hasta obtener una mezcla homogénea.\n" +
+                            "2.-Calienta una sartén a fuego medio y vierte un poco de la mezcla para formar los panqueques.\n" +
+                            "3.-Cocina hasta que se formen burbujas en la superficie, luego voltea y cocina el otro lado.\n" +
+                            "4.-Sirve con miel o jarabe de arce."
                 ),
                 Receta(
                     "Tostadas de Aguacate con Salmón Ahumado",
                     R.drawable.tostadosalmo,
-                    "Ingredientes: 2 rebanadas de pan integral\n" +
+                    "Ingredientes: \n" +
+                            "2 rebanadas de pan integral\n" +
                             "1 aguacate maduro\n" +
                             "100 g de salmón ahumado\n" +
                             "Jugo de limón, sal y pimienta al gusto",
-                    "Tuesta las rebanadas de pan hasta que estén doradas.\n" +
-                            "Machaca el aguacate y mézclalo con el jugo de limón, sal y pimienta.\n" +
-                            "Unta la mezcla de aguacate sobre las tostadas y coloca el salmón ahumado encima."
+                    "preparacion:\n" +
+                            "1.- Tuesta las rebanadas de pan hasta que estén doradas.\n" +
+                            "2.- Machaca el aguacate y mézclalo con el jugo de limón, sal y pimienta.\n" +
+                            "3.- Unta la mezcla de aguacate sobre las tostadas y coloca el salmón ahumado encima."
                 ),
                 Receta(
                     "Bowl de Arroz Integral con Pollo y Verduras",
                     R.drawable.bowlarroz,
-                    "Ingredientes: 1 taza de arroz integral cocido\n" +
+                    "Ingredientes:\n" +
+                            " 1 taza de arroz integral cocido\n" +
                             "1 pechuga de pollo, asada y desmenuzada\n" +
                             "1/2 taza de brócoli al vapor\n" +
                             "1/2 taza de pimientos rojos asados\n" +
                             "Salsa de soya al gusto",
-                    "En un tazón, mezcla el arroz, el pollo, el brócoli y los pimientos.\n" +
-                            "Agrega salsa de soya al gusto y mezcla bien."
+                    "Preparacion:\n" +
+                            "1.- En un tazón, mezcla el arroz, el pollo, el brócoli y los pimientos.\n" +
+                            "2.- Agrega salsa de soya al gusto y mezcla bien."
                 ),
                 Receta(
                     " Pasta con Pesto y Pollo",
                     R.drawable.pastapesto,
-                    "Ingredientes: 200 g de pasta (tipo penne)\n" +
+                    "Ingredientes:\n" +
+                            " 200 g de pasta (tipo penne)\n" +
                             "1 pechuga de pollo, a la parrilla y cortada en trozos\n" +
                             "1/2 taza de pesto\n" +
                             "1/4 de taza de nueces, picadas",
