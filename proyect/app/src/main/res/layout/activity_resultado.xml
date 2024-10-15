@@ -5,58 +5,99 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fon"
     tools:context=".view.ResultadoActivity">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="148dp"
+        android:fontFamily="@font/baloo_bhaijaan"
+        android:text="Resultado final de tus Datos Ingresados"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:gravity="center"
-        android:padding="16dp">
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="0dp">
 
         <!-- Mostrar el resultado del IMC -->
         <TextView
             android:id="@+id/imcTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tu IMC es: 0.0"
-            android:textSize="18sp"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/caprasimo"
+            android:text="El Resultado de tu masa corporar es: 0.0"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         <!-- Clasificación del IMC según el cálculo -->
         <TextView
             android:id="@+id/clasificacionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/caprasimo"
             android:text="Clasificación: Normal"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp" />
+            android:textSize="24sp" />
 
         <!-- Botón para recalcular -->
         <Button
             android:id="@+id/recalcularButton"
-            android:layout_width="wrap_content"
+            android:layout_width="167dp"
             android:layout_height="wrap_content"
-            android:text="Recalcular"
-            android:layout_marginTop="32dp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="#B817456A"
+            android:fontFamily="@font/archivo_black"
+            android:text="Volver a Calcular"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <TextView
             android:id="@+id/sugerenciaTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aquí aparecerá tu sugerencia"
-            android:textSize="18sp"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center"/>
+            android:fontFamily="@font/caprasimo"
+            android:text="Aquí aparecerá tu sugerencia"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/planButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ver Planificación Alimenticia"
+            android:id="@+id/verPlanificacionButton"
+            android:layout_width="255dp"
+            android:layout_height="70dp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#D00D5085"
+            android:fontFamily="@font/archivo_black"
+            android:text="Ver Planificación Alimenticia"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     </LinearLayout>
 

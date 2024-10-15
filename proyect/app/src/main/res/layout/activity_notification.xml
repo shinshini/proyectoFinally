@@ -2,14 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fon"
     android:padding="16dp">
 
     <Button
         android:id="@+id/configurarNotificacionesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#96085897"
+        android:textSize="16sp"
+        android:fontFamily="@font/archivo_black"
         android:text="Configurar Notificaciones"
-        android:layout_centerInParent="true" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/confirmationMessage"
@@ -19,13 +24,18 @@
         android:textSize="16sp"
         android:layout_below="@id/configurarNotificacionesButton"
         android:layout_marginTop="16dp"
+        android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark" />
     <Button
         android:id="@+id/irAPlanificacionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ir a Planificación"
+        android:backgroundTint="#96085897"
+        android:textSize="16sp"
+        android:fontFamily="@font/archivo_black"
         android:layout_below="@id/confirmationMessage"
         android:layout_marginTop="16dp"
-        android:visibility="gone" /> <!-- Inicialmente oculto -->
+        android:visibility="gone"
+        android:textColor="@android:color/white" /> <!-- Inicialmente oculto -->
 </RelativeLayout>

@@ -24,8 +24,21 @@ class SegundaPantallaActivity : AppCompatActivity() {
         val pesoInput = findViewById<EditText>(R.id.pesoInput)
         val finalizarButton = findViewById<Button>(R.id.finalizarButton)
 
+        // Obtener los valores pasados desde ResultadoActivity (si existen)
+        val pesoActual = intent.getFloatExtra("peso", 0f)
+        val estaturaActual = intent.getFloatExtra("estatura", 0f)
+
+        // Prellenar los campos de texto con los valores recibidos
+        if (pesoActual != 0f) {
+            pesoInput.setText(pesoActual.toString())
+        }
+        if (estaturaActual != 0f) {
+            estaturaInput.setText(estaturaActual.toString())
+        }
+
         finalizarButton.setOnClickListener {
             try {
+                // Obtener los datos esenciales que siempre deben estar disponibles
                 val nombre = intent.getStringExtra("nombre") ?: throw IllegalArgumentException("Nombre no disponible")
                 val genero = intent.getStringExtra("genero") ?: throw IllegalArgumentException("Género no disponible")
                 val fechaNacimiento = intent.getStringExtra("fechaNacimiento") ?: throw IllegalArgumentException("Fecha de nacimiento no disponible")
@@ -47,8 +60,11 @@ class SegundaPantallaActivity : AppCompatActivity() {
                 // Guardar el usuario en el ViewModel y Base de Datos
                 viewModel.guardarUsuario(nombre, genero, fechaNacimiento, estatura, peso)
 
-                // Ir a la pantalla de resultados
+                // Ir a la pantalla de resultados con los datos nuevos
                 val intent = Intent(this, ResultadoActivity::class.java)
+                intent.putExtra("nombre", nombre)
+                intent.putExtra("genero", genero)
+                intent.putExtra("fechaNacimiento", fechaNacimiento)
                 intent.putExtra("peso", peso)
                 intent.putExtra("estatura", estatura)
                 startActivity(intent)

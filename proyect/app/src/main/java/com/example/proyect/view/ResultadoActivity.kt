@@ -20,6 +20,10 @@ class ResultadoActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(UsuarioViewModel::class.java)
 
+        // Obtener los valores de nombre, genero, fecha de nacimiento, peso y estatura
+        val nombre = intent.getStringExtra("nombre")
+        val genero = intent.getStringExtra("genero")
+        val fechaNacimiento = intent.getStringExtra("fechaNacimiento")
         val peso = intent.getFloatExtra("peso", 0f)
         val estatura = intent.getFloatExtra("estatura", 0f)
 
@@ -44,12 +48,30 @@ class ResultadoActivity : AppCompatActivity() {
         val clasificacionTextView = findViewById<TextView>(R.id.clasificacionTextView)
         clasificacionTextView.text = "Clasificación: ${obtenerClasificacion(imc)}"
 
-        // Configurar el botón para ver la planificación
-        val planButton = findViewById<Button>(R.id.planButton)
-        planButton.setOnClickListener {
-            // Lanzar PlanificacionActivity pasando el objetivo como extra
+        // Botón de recalcular
+        val recalcularButton = findViewById<Button>(R.id.recalcularButton)
+        recalcularButton.setOnClickListener {
+            // Volver a la SegundaPantallaActivity para modificar los datos
+            val intent = Intent(this, SegundaPantallaActivity::class.java)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("genero", genero)
+            intent.putExtra("fechaNacimiento", fechaNacimiento)
+            intent.putExtra("peso", peso)
+            intent.putExtra("estatura", estatura)
+            startActivity(intent)
+        }
+
+        // Botón para ver la planificación
+        val verPlanificacionButton = findViewById<Button>(R.id.verPlanificacionButton)
+        verPlanificacionButton.setOnClickListener {
+            // Ir a la PlanificacionActivity con los datos actuales
             val intent = Intent(this, PlanificacionActivity::class.java)
-            intent.putExtra("objetivo", objetivo)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("genero", genero)
+            intent.putExtra("fechaNacimiento", fechaNacimiento)
+            intent.putExtra("peso", peso)
+            intent.putExtra("estatura", estatura)
+            intent.putExtra("imc", imc)  // Pasar el IMC calculado a la planificación
             startActivity(intent)
         }
     }
