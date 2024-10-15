@@ -1,4 +1,5 @@
 package com.example.proyect.view
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -15,15 +16,18 @@ class DetalleDiaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalle_dia)
 
-        // Suponiendo que el día y el objetivo se pasan a través de Intent extras
+        // Obtener el día y el objetivo a través de Intent extras
         val dia = intent.getStringExtra("DIA") ?: "Lunes"
         val objetivo = intent.getStringExtra("OBJETIVO") ?: "subir"
+
+        // Mostrar el día en el TextView
+        findViewById<TextView>(R.id.diaTextView).text = "Planificación para $dia"
 
         // Obtener el plan del día
         val planDia = obtenerPlanDelDia(dia, objetivo)
 
         // Mostrar los datos en la UI
-        mostrarPlanComidas(planDia, dia)
+        mostrarPlanComidas(planDia)
 
         val volverButton: Button = findViewById(R.id.volverAPlanificacionButton)
         volverButton.setOnClickListener {
@@ -33,10 +37,11 @@ class DetalleDiaActivity : AppCompatActivity() {
             // Opcional: finalizar la actividad actual si no quieres que el usuario pueda volver a esta
             finish()
         }
+
     }
 
-    private fun mostrarPlanComidas(planDia: PlanDia, dia: String) {
-        findViewById<TextView>(R.id.diaTextView).text = "Planificación para $dia"
+
+    private fun mostrarPlanComidas(planDia: PlanDia) {
 
         // Desayuno
         findViewById<TextView>(R.id.desayunoTextView).text = planDia.desayuno.titulo

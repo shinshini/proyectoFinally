@@ -15,10 +15,10 @@ class PlanificacionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_planificacion)
 
         // Obtener el objetivo del intent
-        val objetivo = intent.getStringExtra("objetivo")
+        val objetivo = intent.getStringExtra("OBJETIVO")
 
         // Configurar los botones para cada día de la semana
-        val diasSemana = listOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
+        val diasSemana = listOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
 
         val planificacionListView = findViewById<ListView>(R.id.planificacionListView)
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, diasSemana)
@@ -29,9 +29,10 @@ class PlanificacionActivity : AppCompatActivity() {
             val diaSeleccionado = diasSemana[position]
 
             // Abrir la actividad de detalles para el día seleccionado
-            val intent = Intent(this, DetalleDiaActivity::class.java)
-            intent.putExtra("dia", diaSeleccionado)
-            intent.putExtra("objetivo", objetivo)
+            val intent = Intent(this, DetalleDiaActivity::class.java).apply {
+                putExtra("DIA", diaSeleccionado) // Usar el día seleccionado
+                putExtra("OBJETIVO", objetivo) // Pasar el objetivo
+            }
             startActivity(intent)
         }
         // Botón para activar notificaciones
