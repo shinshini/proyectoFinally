@@ -58,10 +58,10 @@ class DetalleDiaActivity : AppCompatActivity() {
             "bajar" -> planBajarPeso(dia)
             "mantener" -> planMantenerPeso(dia)
             else -> PlanDia(
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible")
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible")
             )
         }
     }
@@ -71,7 +71,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Lunes" -> PlanDia(
                 Receta(
                     " Tortilla de Espinacas y Queso",
-                    R.drawable.desayuno_img,
+                    R.drawable.tortilla,
                     "Ingredientes: 3 huevos\n" +
                             "1 taza de espinacas frescas\n" +
                             "1/2 taza de queso cheddar rallado\n" +
@@ -84,7 +84,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Batido de Plátano y Mantequilla de Maní",
-                    R.drawable.merienda_img,
+                    R.drawable.plamani,
                     "Ingredientes: 1 plátano\n" +
                             "2 cucharadas de mantequilla de maní\n" +
                             "1 taza de leche (puede ser entera o de almendra)\n" +
@@ -94,10 +94,10 @@ class DetalleDiaActivity : AppCompatActivity() {
                             "Sirve frío."
                 ),
                 Receta(
-                    "Ensalada de Pollo con Aguacate y Nueces",
-                    R.drawable.almuerzo_img,
+                    "Ensalada de Pollo con Palta y Nueces",
+                    R.drawable.ensapollo,
                     "Ingredientes: 1 pechuga de pollo a la parrilla, en trozos\n" +
-                            "1 aguacate, en cubos\n" +
+                            "1 Palta, en cubos\n" +
                             "1/2 taza de nueces\n" +
                             "2 tazas de lechuga mixta\n" +
                             "Aderezo de aceite de oliva y vinagre",
@@ -106,7 +106,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Pasta con Salsa de Tomate y Albóndigas",
-                    R.drawable.cena_img,
+                    R.drawable.pastatoma,
                     "Ingredientes: 200 g de pasta (espagueti o la que prefieras)\n" +
                             "1 taza de salsa de tomate\n" +
                             "4 albóndigas de carne (pueden ser compradas o caseras)\n" +
@@ -122,7 +122,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Martes" -> PlanDia(
                 Receta(
                     "Panqueques de Avena y Plátano",
-                    R.drawable.desayuno_img,
+                    R.drawable.panqueavena,
                     "1 taza de avena\n" +
                             "2 plátanos maduros\n" +
                             "2 huevos\n" +
@@ -135,7 +135,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Tostadas de Aguacate con Salmón Ahumado",
-                    R.drawable.merienda_img,
+                    R.drawable.tostadosalmo,
                     "Ingredientes: 2 rebanadas de pan integral\n" +
                             "1 aguacate maduro\n" +
                             "100 g de salmón ahumado\n" +
@@ -146,7 +146,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Bowl de Arroz Integral con Pollo y Verduras",
-                    R.drawable.almuerzo_img,
+                    R.drawable.bowlarroz,
                     "Ingredientes: 1 taza de arroz integral cocido\n" +
                             "1 pechuga de pollo, asada y desmenuzada\n" +
                             "1/2 taza de brócoli al vapor\n" +
@@ -157,7 +157,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Pasta con Pesto y Pollo",
-                    R.drawable.cena_img,
+                    R.drawable.pastapesto,
                     "Ingredientes: 200 g de pasta (tipo penne)\n" +
                             "1 pechuga de pollo, a la parrilla y cortada en trozos\n" +
                             "1/2 taza de pesto\n" +
@@ -171,7 +171,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Miercoles" -> PlanDia(
                 Receta(
                     "Avena Cocida con Frutas y Nueces",
-                    R.drawable.desayuno_img,
+                    R.drawable.avenaconfrutas,
                     "1 taza de avena\n" +
                             "2 tazas de leche (puede ser entera o de almendra)\n" +
                             "1/2 manzana, en cubos\n" +
@@ -181,7 +181,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Hummus con Palitos de Verdura",
-                    R.drawable.merienda_img,
+                    R.drawable.hummusverdura,
                     "Ingredientes: 1 taza de garbanzos cocidos\n" +
                             "2 cucharadas de tahini\n" +
                             "1 diente de ajo\n" +
@@ -192,7 +192,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Tacos de Frijoles y Aguacate",
-                    R.drawable.almuerzo_img,
+                    R.drawable.tacosfrijo,
                     "Ingredientes: 1 lata de frijoles negros, escurridos\n" +
                             "1 aguacate, en rodajas\n" +
                             "4 tortillas de maíz\n" +
@@ -202,7 +202,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Salmón a la Plancha con Quinoa",
-                    R.drawable.cena_img,
+                    R.drawable.salmonquinua,
                     "Ingredientes:200 g de salmón\n" +
                             "1 taza de quinoa cocida\n" +
                             "1 taza de espinacas\n" +
@@ -215,7 +215,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Jueves" -> PlanDia(
                 Receta(
                     "Tortitas de Plátano y Avena",
-                    R.drawable.desayuno_img,
+                    R.drawable.tortitaaven,
                     "2 plátanos maduros\n" +
                             "1 taza de avena\n" +
                             "2 huevos\n" +
@@ -225,7 +225,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Batido de Yogur y Espinacas",
-                    R.drawable.merienda_img,
+                    R.drawable.yogurespinaca,
                     "Ingredientes: 1 taza de yogur natural\n" +
                             "1 taza de espinacas frescas\n" +
                             "1/2 plátano\n" +
@@ -234,7 +234,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Wrap de Pollo y Verduras",
-                    R.drawable.almuerzo_img,
+                    R.drawable.wrappollo,
                     "Ingredientes: 1 tortilla integral\n" +
                             "100 g de pollo asado, en tiras\n" +
                             "1/2 taza de lechuga\n" +
@@ -245,7 +245,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Guiso de Lentejas",
-                    R.drawable.cena_img,
+                    R.drawable.guisolenteja,
                     "Ingredientes:1 taza de lentejas cocidas\n" +
                             "1 zanahoria, picada\n" +
                             "1 cebolla, picada\n" +
@@ -259,7 +259,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Viernes" -> PlanDia(
                 Receta(
                     "Chía Pudding con Frutas",
-                    R.drawable.desayuno_img,
+                    R.drawable.puddingchia,
                     "1/4 de taza de semillas de chía\n" +
                             "1 taza de leche de almendra\n" +
                             "1 cucharadita de miel\n" +
@@ -269,7 +269,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Bolitas Energéticas de Cacao",
-                    R.drawable.merienda_img,
+                    R.drawable.bolitascacao,
                     "Ingredientes: 1 taza de dátiles\n" +
                             "1/2 taza de nueces\n" +
                             "2 cucharadas de cacao en polvo",
@@ -278,7 +278,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Ensalada de Atún y Garbanzos",
-                    R.drawable.almuerzo_img,
+                    R.drawable.ensaatun,
                     "Ingredientes: 1 lata de atún, escurrido\n" +
                             "1 taza de garbanzos cocidos\n" +
                             "1/2 cebolla roja, picada\n" +
@@ -288,7 +288,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Pechuga de Pollo al Limón con Verduras Asadas",
-                    R.drawable.cena_img,
+                    R.drawable.polloverduasada,
                     "Ingredientes:200 g de pechuga de pollo\n" +
                             "1 taza de calabacín, en rodajas\n" +
                             "1 taza de zanahorias, en rodajas\n" +
@@ -302,7 +302,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Sabado" -> PlanDia(
                 Receta(
                     " Tostadas Francesas con Frutas",
-                    R.drawable.desayuno_img,
+                    R.drawable.tostadafruta,
                     "2 rebanadas de pan integral\n" +
                             "2 huevos\n" +
                             "1/2 taza de leche\n" +
@@ -314,7 +314,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Frutos Secos y Chocolate",
-                    R.drawable.merienda_img,
+                    R.drawable.frutochoco,
                     "Ingredientes: 1/2 taza de nueces, almendras y avellanas\n" +
                             "1/4 de taza de chocolate negro",
                     "Mezcla los frutos secos con el chocolate troceado.\n" +
@@ -322,17 +322,17 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Bowl de Arroz y Frijoles",
-                    R.drawable.almuerzo_img,
+                    R.drawable.arrozfrijol,
                     "Ingredientes: 1 taza de arroz integral cocido\n" +
                             "1 taza de frijoles negros\n" +
-                            "1/2 aguacate, en rodajas\n" +
+                            "1/2 palta, en rodajas\n" +
                             "Salsa al gusto",
                     "En un tazón, coloca el arroz, los frijoles y el aguacate.\n" +
                             "Añade la salsa de tu elección y mezcla."
                 ),
                 Receta(
                     "Salmón al Horno con Espinacas",
-                    R.drawable.cena_img,
+                    R.drawable.salmonhorno,
                     "Ingredientes:200 g de salmón\n" +
                             "2 tazas de espinacas frescas\n" +
                             "1 cucharada de aceite de oliva\n" +
@@ -345,7 +345,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Domingo" -> PlanDia(
                 Receta(
                     " Huevos Revueltos con Espinacas y Queso",
-                    R.drawable.desayuno_img,
+                    R.drawable.huevorevuelto,
                     "3 huevos\n" +
                             "1 taza de espinacas\n" +
                             "1/4 de taza de queso feta\n" +
@@ -356,7 +356,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Batido de Mango y Coco",
-                    R.drawable.merienda_img,
+                    R.drawable.mangococo,
                     "Ingredientes: 1 taza de mango fresco o congelado\n" +
                             "1 taza de leche de coco\n" +
                             "1 plátano\n" +
@@ -366,7 +366,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Ensalada de Garbanzos y Tomate",
-                    R.drawable.almuerzo_img,
+                    R.drawable.garbanzotomate,
                     "Ingredientes:1 taza de garbanzos cocidos\n" +
                             "1 tomate grande, picado\n" +
                             "1/4 de cebolla roja, picada\n" +
@@ -376,7 +376,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Pasta Integral con Salsa de Tomate y Albahaca",
-                    R.drawable.cena_img,
+                    R.drawable.pastatomatealbahaca,
                     "Ingredientes:1 taza de pasta integral\n" +
                             "1 taza de salsa de tomate\n" +
                             "Albahaca fresca al gusto",
@@ -386,10 +386,10 @@ class DetalleDiaActivity : AppCompatActivity() {
             )
             // Agregar los demás días de la semana aquí
             else -> PlanDia(
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible")
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible")
             )
         }
     }
@@ -399,7 +399,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Lunes" -> PlanDia(
                 Receta(
                     "Yogur con Frutas y Semillas",
-                    R.drawable.desayuno_img,
+                    R.drawable.yogurfrutillasemilla,
                     "Ingredientes: 1 taza de yogur natural\n" +
                             "1/2 taza de fresas picadas\n" +
                             "1/2 plátano en rodajas\n" +
@@ -408,14 +408,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Palitos de Zanahoria y Hummus",
-                    R.drawable.merienda_img,
+                    R.drawable.palitoszanahoria,
                     "Ingredientes: 1 zanahoria grande, cortada en palitos\n" +
                             "1/4 de taza de hummus",
                     "Sirve los palitos de zanahoria con hummus para mojar."
                 ),
                 Receta(
                     "Ensalada de Pollo a la Parrilla",
-                    R.drawable.almuerzo_img,
+                    R.drawable.polloparilla,
                     "Ingredientes: 150 g de pechuga de pollo a la parrilla\n" +
                             "2 tazas de espinacas\n" +
                             "1/2 aguacate\n" +
@@ -425,7 +425,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Pescado al Horno con Verduras",
-                    R.drawable.cena_img,
+                    R.drawable.hornoverdura,
                     "Ingredientes: 150 g de filete de pescado (como salmón)\n" +
                             "1 taza de brócoli\n" +
                             "1 zanahoria en rodajas\n" +
@@ -438,7 +438,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Martes" -> PlanDia(
                 Receta(
                     "Avena con Frutas",
-                    R.drawable.desayuno_img,
+                    R.drawable.avenamanzana,
                     "1/2 taza de avena\n" +
                             "1 taza de agua o leche\n" +
                             "1/2 manzana en trozos\n" +
@@ -447,7 +447,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Batido Verde",
-                    R.drawable.merienda_img,
+                    R.drawable.batidoverde,
                     "Ingredientes: 1 taza de espinacas\n" +
                             "1/2 plátano\n" +
                             "1 taza de leche de almendras\n" +
@@ -456,7 +456,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Quinoa con Verduras Asadas",
-                    R.drawable.almuerzo_img,
+                    R.drawable.quinuaasada,
                     "Ingredientes: 1/2 taza de quinoa cocida\n" +
                             "1/2 taza de pimientos y calabacín asados\n" +
                             "1 cucharada de aceite de oliva\n" +
@@ -465,7 +465,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Sopa de Lentejas",
-                    R.drawable.cena_img,
+                    R.drawable.sopalenteja,
                     "Ingredientes: 1/2 taza de lentejas\n" +
                             "1 zanahoria picada\n" +
                             "1/2 cebolla picada\n" +
@@ -476,8 +476,8 @@ class DetalleDiaActivity : AppCompatActivity() {
 
             "Miercoles" -> PlanDia(
                 Receta(
-                    "Tostadas de Aguacate",
-                    R.drawable.desayuno_img,
+                    "Tostadas de Palta",
+                    R.drawable.tostadapalta,
                     "1 rebanada de pan integral\n" +
                             "1/2 aguacate\n" +
                             "Sal y pimienta al gusto",
@@ -485,14 +485,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Manzana con Mantequilla de Almendra",
-                    R.drawable.merienda_img,
+                    R.drawable.manzamante,
                     "Ingredientes: 1 manzana\n" +
                             "1 cucharada de mantequilla de almendra",
                     "Corta la manzana en rodajas y unta la mantequilla de almendra."
                 ),
                 Receta(
                     "Ensalada de Garbanzos",
-                    R.drawable.almuerzo_img,
+                    R.drawable.esnsagarbanzo,
                     "Ingredientes: 1 taza de garbanzos cocidos\n" +
                             "1/2 pepino picado\n" +
                             "1/2 cebolla roja picada\n" +
@@ -502,7 +502,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Tacos de Lechuga con Pavo",
-                    R.drawable.cena_img,
+                    R.drawable.tacolechuga,
                     "Ingredientes:150 g de pavo molido\n" +
                             "1 cucharadita de especias (comino, pimentón)\n" +
                             "Hojas de lechuga",
@@ -513,7 +513,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Jueves" -> PlanDia(
                 Receta(
                     "Smoothie de Plátano y Espinaca",
-                    R.drawable.desayuno_img,
+                    R.drawable.smotieplatano,
                     "1 plátano\n" +
                             "1 taza de espinacas\n" +
                             "1/2 taza de yogur natural\n" +
@@ -522,14 +522,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Nueces y Frutas Secas",
-                    R.drawable.merienda_img,
+                    R.drawable.frutoseconuez,
                     "Ingredientes: 1/4 de taza de nueces\n" +
                             "1/4 de taza de frutas secas (como pasas)",
                     "Mezcla las nueces y las frutas secas."
                 ),
                 Receta(
                     "Wrap de Pollo y Verduras",
-                    R.drawable.almuerzo_img,
+                    R.drawable.pollover,
                     "Ingredientes: 150 g de pollo a la parrilla\n" +
                             "1 tortilla integral\n" +
                             "1/2 taza de lechuga\n" +
@@ -538,7 +538,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Berenjenas al Horno",
-                    R.drawable.cena_img,
+                    R.drawable.berenjenahorno,
                     "Ingredientes:1 berenjena\n" +
                             "2 cucharadas de aceite de oliva\n" +
                             "Sal y especias al gusto",
@@ -549,7 +549,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Viernes" -> PlanDia(
                 Receta(
                     "Pudding de Chía",
-                    R.drawable.desayuno_img,
+                    R.drawable.pudingchi,
                     "1/4 de taza de semillas de chía\n" +
                             "1 taza de leche de almendras\n" +
                             "1 cucharadita de miel\n" +
@@ -558,14 +558,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Yogur con Granola",
-                    R.drawable.merienda_img,
+                    R.drawable.yogurgranola,
                     "Ingredientes: 1 taza de yogur natural\n" +
                             "1/4 de taza de granola",
                     "Mezcla el yogur con la granola."
                 ),
                 Receta(
                     "Tazón de Quinoa y Frijoles",
-                    R.drawable.almuerzo_img,
+                    R.drawable.tazonquinua,
                     "Ingredientes: 1/2 taza de quinoa cocida\n" +
                             "1/2 taza de frijoles negros\n" +
                             "1/2 aguacate\n" +
@@ -574,7 +574,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Tortilla de Espinacas",
-                    R.drawable.cena_img,
+                    R.drawable.tortillaespinaca,
                     "Ingredientes:2 huevos\n" +
                             "1 taza de espinacas\n" +
                             "1/2 cebolla",
@@ -584,7 +584,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Sabado" -> PlanDia(
                 Receta(
                     " Panqueques de Avena",
-                    R.drawable.desayuno_img,
+                    R.drawable.panqueavenaaa,
                     "1 taza de avena\n" +
                             "1 plátano\n" +
                             "1/2 taza de leche",
@@ -592,14 +592,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Galletas de Avena",
-                    R.drawable.merienda_img,
+                    R.drawable.galletaavena,
                     "Ingredientes: 1 plátano\n" +
                             "1/2 taza de avena",
                     "Mezcla y hornea a 180°C por 15 minutos."
                 ),
                 Receta(
                     "Ensalada de Atún",
-                    R.drawable.almuerzo_img,
+                    R.drawable.ensaladaatun,
                     "Ingredientes: 1 lata de atún\n" +
                             "1/2 taza de garbanzos\n" +
                             "1/2 pepino\n" +
@@ -608,7 +608,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Verduras Salteadas",
-                    R.drawable.cena_img,
+                    R.drawable.verdusalteada,
                     "Ingredientes:1 taza de verduras variadas (pimientos, brócoli, zanahorias)\n" +
                             "1 cucharada de salsa de soja",
                     " Saltea las verduras en una sartén con salsa de soja."
@@ -617,7 +617,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Domingo" -> PlanDia(
                 Receta(
                     " Smoothie de Fresa y Yogur",
-                    R.drawable.desayuno_img,
+                    R.drawable.smotiefruti,
                     "1 taza de fresas\n" +
                             "1/2 taza de yogur\n" +
                             "1/2 taza de leche",
@@ -625,7 +625,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Batido de Proteínas",
-                    R.drawable.merienda_img,
+                    R.drawable.batidoproteina,
                     "Ingredientes: 1 cucharada de proteína en polvo\n" +
                             "1 plátano\n" +
                             "1 taza de agua o leche",
@@ -633,7 +633,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Pita de Pollo",
-                    R.drawable.almuerzo_img,
+                    R.drawable.pitapollo,
                     "Ingredientes:150 g de pollo a la parrilla\n" +
                             "1 pan pita integral\n" +
                             "1/2 taza de ensalada",
@@ -641,7 +641,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Sopa de Verduras",
-                    R.drawable.cena_img,
+                    R.drawable.sopaver,
                     "Ingredientes:1 taza de verduras mixtas\n" +
                             "1 litro de caldo de verduras",
                     " Cocina todos los ingredientes en una olla hasta que las verduras estén tiernas."
@@ -649,10 +649,10 @@ class DetalleDiaActivity : AppCompatActivity() {
             )
             // Agregar los demás días de la semana aquí
             else -> PlanDia(
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible")
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible")
             )
         }
     }
@@ -661,24 +661,24 @@ class DetalleDiaActivity : AppCompatActivity() {
         return when (dia) {
             "Lunes" -> PlanDia(
                 Receta(
-                    "Avena con Frutas y Nueces",
-                    R.drawable.desayuno_img,
-                    "Ingredientes: 1/2 taza de avena\n" +
-                            "1 taza de leche o agua\n" +
-                            "1/2 plátano en rodajas\n" +
-                            "1 cucharada de nueces picadas",
-                    "Cocina la avena con agua o leche, luego añade el plátano y las nueces."
+                    " Crepes de Avena",
+                    R.drawable.grepeavena,
+                    "Ingredientes: 1 taza de avena\n" +
+                            "1 taza de leche\n" +
+                            "1 huevo\n" +
+                            "Frutas para rellenar",
+                    "Mezcla todos los ingredientes y cocina en una sartén como crepes. Rellena con frutas."
                 ),
                 Receta(
                     "Yogur Griego con Miel",
-                    R.drawable.merienda_img,
+                    R.drawable.yogurmiel,
                     "Ingredientes: 1 taza de yogur griego\n" +
                             "1 cucharadita de miel",
                     "Mezcla el yogur con la miel y disfruta."
                 ),
                 Receta(
                     "Ensalada de Quinoa y Garbanzos",
-                    R.drawable.almuerzo_img,
+                    R.drawable.ensaquinuagarbazo,
                     "Ingredientes: 1/2 taza de quinoa cocida\n" +
                             "1/2 taza de garbanzos cocidos\n" +
                             "1/2 pepino picado\n" +
@@ -688,7 +688,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Salmón al Horno con Espárragos",
-                    R.drawable.cena_img,
+                    R.drawable.salmonesparago,
                     "Ingredientes: 150 g de salmón\n" +
                             "1 taza de espárragos\n" +
                             "1 cucharada de aceite de oliva\n" +
@@ -700,7 +700,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Martes" -> PlanDia(
                 Receta(
                     "Yogur con Semillas de Chía y Frutas",
-                    R.drawable.desayuno_img,
+                    R.drawable.yogursemillas,
                     "1 taza de yogur natural\n" +
                             "1 cucharada de semillas de chía\n" +
                             "1/2 taza de fresas o arándanos",
@@ -708,14 +708,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Hummus con Palitos de Pepino",
-                    R.drawable.merienda_img,
+                    R.drawable.palitospepino,
                     "Ingredientes: 1/4 de taza de hummus\n" +
                             "1 pepino cortado en palitos",
                     "Sirve el hummus con los palitos de pepino para mojar."
                 ),
                 Receta(
                     "Wrap de Pavo y Espinacas",
-                    R.drawable.almuerzo_img,
+                    R.drawable.wrappavo,
                     "Ingredientes: 150 g de pechuga de pavo\n" +
                             "1 tortilla integral\n" +
                             "1 taza de espinacas\n" +
@@ -723,18 +723,22 @@ class DetalleDiaActivity : AppCompatActivity() {
                     "Rellena la tortilla con el pavo, espinacas y tomate, y enrolla."
                 ),
                 Receta(
-                    " Sopa de Verduras",
-                    R.drawable.cena_img,
-                    "Ingredientes: 1 taza de verduras mixtas (zanahoria, calabacín, apio)\n" +
-                            "1 litro de caldo de verduras",
-                    "Cocina las verduras en el caldo hasta que estén tiernas."
+                    " Pimientos Rellenos de Quinoa",
+                    R.drawable.pimentos,
+                    "Ingredientes:2 pimientos (rojo o verde)\n" +
+                            "1 taza de quinoa cocida\n" +
+                            "1/2 taza de frijoles negros, escurridos\n" +
+                            "1/4 de taza de maíz\n" +
+                            "1 cucharadita de comino\n" +
+                            "Sal y pimienta al gusto",
+                            "Precalienta el horno a 180 °C. Corta los pimientos por la mitad y retira las semillas. Mezcla la quinoa, frijoles, maíz y especias. Rellena los pimientos y hornea durante 25-30 minutos."
                 )
             )
 
             "Miercoles" -> PlanDia(
                 Receta(
                     "Avena Nocturna",
-                    R.drawable.desayuno_img,
+                    R.drawable.avenanortuna,
                     "1/2 taza de avena\n" +
                             "1 taza de leche de almendras\n" +
                             "1 cucharada de miel\n" +
@@ -743,34 +747,35 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Frutas con Yogur",
-                    R.drawable.merienda_img,
+                    R.drawable.frutayogurt,
                     "Ingredientes: 1 taza de frutas mixtas (kiwi, piña, fresas)\n" +
                             "1/2 taza de yogur griego",
                     "Mezcla las frutas con el yogur y disfruta."
                 ),
                 Receta(
                     "Filete de Pescado a la Plancha",
-                    R.drawable.almuerzo_img,
+                    R.drawable.filetedepescado,
                     "Ingredientes: 150 g de filete de pescado (merluza o tilapia)\n" +
                             "1 taza de espinacas salteadas\n" +
                             "1 cucharada de aceite de oliva",
                     "Cocina el pescado en una sartén a fuego medio con aceite de oliva y sirve con las espinacas."
                 ),
                 Receta(
-                    " Ensalada de Atún",
-                    R.drawable.cena_img,
-                    "Ingredientes:1 lata de atún\n" +
-                            "1/2 taza de garbanzos\n" +
-                            "1/2 cebolla roja\n" +
-                            "2 tazas de lechuga",
-                    " Mezcla todos los ingredientes y añade un poco de jugo de limón."
+                    " Fajitas de Pollo",
+                    R.drawable.fajitapollo,
+                    "Ingredientes:2 pechugas de pollo, en tiras\n" +
+                            "1 pimiento rojo, en tiras\n" +
+                            "1 pimiento verde, en tiras\n" +
+                            "1 cebolla, en tiras\n" +
+                            "Especias al gusto (comino, paprika)",
+                    " Sofríe el pollo y las verduras con las especias. Sirve en tortillas integrales."
                 )
             )
 
             "Jueves" -> PlanDia(
                 Receta(
                     "Smoothie de Mango y Espinacas",
-                    R.drawable.desayuno_img,
+                    R.drawable.mangoespinaca,
                     "1 taza de espinacas\n" +
                             "1/2 taza de mango congelado\n" +
                             "1 plátano\n" +
@@ -779,22 +784,23 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Nueces y Pasas",
-                    R.drawable.merienda_img,
+                    R.drawable.nuecespasas,
                     "Ingredientes: 1/4 de taza de nueces\n" +
                             "1/4 de taza de frutas secas (como pasas)",
                     "Mezcla y disfruta como un snack."
                 ),
                 Receta(
-                    "Quinoa con Verduras Asadas",
-                    R.drawable.almuerzo_img,
-                    "Ingredientes: 1/2 taza de quinoa cocida\n" +
-                            "1 taza de verduras asadas (calabacín, pimientos, berenjena)\n" +
-                            "1 cucharada de aceite de oliva",
-                    "Mezcla la quinoa con las verduras asadas y añade un poco de aceite."
+                    "Sopa de Calabaza",
+                    R.drawable.sopacalabaza,
+                    "Ingredientes:500 g de calabaza, pelada y en cubos\n" +
+                            "1 cebolla, picada\n" +
+                            "2 tazas de caldo de verduras\n" +
+                            "Sal y pimienta al gusto",
+                    "Sofríe la cebolla, añade la calabaza y el caldo. Cocina hasta que la calabaza esté tierna. Tritura hasta obtener una textura suave."
                 ),
                 Receta(
                     " Tortilla de Espinacas y Champiñones",
-                    R.drawable.cena_img,
+                    R.drawable.toritllaespinaca,
                     "Ingredientes:2 huevos\n" +
                             "1/2 taza de espinacas\n" +
                             "1/2 taza de champiñones",
@@ -805,7 +811,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Viernes" -> PlanDia(
                 Receta(
                     "Parfait de Yogur y Granola",
-                    R.drawable.desayuno_img,
+                    R.drawable.yogurgranola,
                     "1 taza de yogur natural\n" +
                             "1/2 taza de granola\n" +
                             "1/2 taza de frutas mixtas",
@@ -813,7 +819,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Batido de Frutas y Espinacas",
-                    R.drawable.merienda_img,
+                    R.drawable.frutaespina,
                     "Ingredientes: 1 taza de espinacas\n" +
                             "1 plátano\n" +
                             "1/2 taza de fresas\n" +
@@ -822,7 +828,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     "Pollo al Curry con Arroz Integral",
-                    R.drawable.almuerzo_img,
+                    R.drawable.pollocurry,
                     "Ingredientes: 150 g de pechuga de pollo\n" +
                             "1/2 taza de arroz integral cocido\n" +
                             "1 cucharada de curry en polvo",
@@ -830,7 +836,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Pizza de Coliflor",
-                    R.drawable.cena_img,
+                    R.drawable.pizzacolifor,
                     "Ingredientes:1 taza de coliflor rallada\n" +
                             "1 huevo\n" +
                             "1/2 taza de queso mozzarella\n" +
@@ -842,7 +848,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Sabado" -> PlanDia(
                 Receta(
                     " Tostadas Francesas Saludables",
-                    R.drawable.desayuno_img,
+                    R.drawable.tostadasaludable,
                     "1 rebanada de pan integral\n" +
                             "1 huevo\n" +
                             "1/4 de taza de leche\n" +
@@ -851,14 +857,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Galletas de Plátano y Avena",
-                    R.drawable.merienda_img,
+                    R.drawable.galletaavenaplan,
                     "Ingredientes: 1 plátano maduro\n" +
                             "1/2 taza de avena",
                     "Mezcla y hornea a 180°C durante 15 minutos."
                 ),
                 Receta(
                     " Ensalada de Pollo y Mango",
-                    R.drawable.almuerzo_img,
+                    R.drawable.ensapollomango,
                     "Ingredientes: 150 g de pechuga de pollo\n" +
                             "1/2 mango en cubos\n" +
                             "2 tazas de lechuga",
@@ -866,7 +872,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Salteado de Tofu y Verduras",
-                    R.drawable.cena_img,
+                    R.drawable.saltetofu,
                     "Ingredientes:150 g de tofu\n" +
                             "1 taza de verduras mixtas (brócoli, zanahoria, pimientos)\n" +
                             "Salsa de soja al gusto",
@@ -876,7 +882,7 @@ class DetalleDiaActivity : AppCompatActivity() {
             "Domingo" -> PlanDia(
                 Receta(
                     " Tortilla de Claras con Espinacas y Tomate",
-                    R.drawable.desayuno_img,
+                    R.drawable.tortillaespitoma,
                     "4 claras de huevo\n" +
                             "1 taza de espinacas frescas\n" +
                             "1/2 tomate picado\n" +
@@ -885,14 +891,14 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Batido de Frutas",
-                    R.drawable.merienda_img,
+                    R.drawable.batidofruta,
                     "Ingredientes: 1 taza de frutas mixtas (fresas, plátano)\n" +
                             "1 taza de leche de almendras",
                     "Mezcla todos los ingredientes en una licuadora."
                 ),
                 Receta(
                     "Hamburguesa de Pavo",
-                    R.drawable.almuerzo_img,
+                    R.drawable.hanburpavo,
                     "Ingredientes:150 g de carne de pavo\n" +
                             "1 pan integral\n" +
                             "Lechuga, tomate y cebolla al gusto",
@@ -900,7 +906,7 @@ class DetalleDiaActivity : AppCompatActivity() {
                 ),
                 Receta(
                     " Ensalada de Espinacas y Fresas",
-                    R.drawable.cena_img,
+                    R.drawable.ensaespinacafresa,
                     "Ingredientes:2 tazas de espinacas\n" +
                             "1/2 taza de fresas en rodajas\n" +
                             "1/4 de taza de nueces\n" +
@@ -910,10 +916,10 @@ class DetalleDiaActivity : AppCompatActivity() {
             )
             // Agregar los demás días de la semana aquí
             else -> PlanDia(
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible"),
-                Receta("No disponible", R.drawable.default_img, "No disponible", "No disponible")
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible"),
+                Receta("No disponible", R.drawable.defaulttt, "No disponible", "No disponible")
             )
         }
     }
