@@ -58,6 +58,7 @@ class ResultadoActivity : AppCompatActivity() {
             intent.putExtra("fechaNacimiento", fechaNacimiento)
             intent.putExtra("peso", peso)
             intent.putExtra("estatura", estatura)
+
             startActivity(intent)
         }
 
@@ -71,7 +72,8 @@ class ResultadoActivity : AppCompatActivity() {
             intent.putExtra("fechaNacimiento", fechaNacimiento)
             intent.putExtra("peso", peso)
             intent.putExtra("estatura", estatura)
-            intent.putExtra("imc", imc)  // Pasar el IMC calculado a la planificación
+            intent.putExtra("imc", imc)
+            intent.putExtra("OBJETIVO", objetivo)  // Pasar el IMC calculado a la planificación
             startActivity(intent)
         }
     }

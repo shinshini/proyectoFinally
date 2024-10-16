@@ -2,6 +2,7 @@ package com.example.proyect.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
@@ -15,8 +16,8 @@ class PlanificacionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_planificacion)
 
         // Obtener el objetivo del intent
-        val objetivo = intent.getStringExtra("OBJETIVO")
-
+        val objetivo = intent.getStringExtra("OBJETIVO")?:"mantener"
+        Log.d("PlanificacionActivity", "Objetivo recibido en PlanificacionActivity: $objetivo")
         // Configurar los botones para cada día de la semana
         val diasSemana = listOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
 
@@ -28,11 +29,12 @@ class PlanificacionActivity : AppCompatActivity() {
         planificacionListView.setOnItemClickListener { _, _, position, _ ->
             val diaSeleccionado = diasSemana[position]
 
-            // Abrir la actividad de detalles para el día seleccionado
             val intent = Intent(this, DetalleDiaActivity::class.java).apply {
-                putExtra("DIA", diaSeleccionado) // Usar el día seleccionado
-                putExtra("OBJETIVO", objetivo) // Pasar el objetivo
+                putExtra("DIA", diaSeleccionado)
+                putExtra("OBJETIVO", objetivo)
+                Log.d("PlanificacionActivity", "Objetivo enviado a DetalleDiaActivity: $objetivo")// El objetivo debe pasarse correctamente aquí
             }
+
             startActivity(intent)
         }
         // Botón para activar notificaciones
@@ -45,7 +47,7 @@ class PlanificacionActivity : AppCompatActivity() {
     // Función para iniciar las notificaciones
     private fun iniciarNotificaciones(objetivo: String) {
         val intent = Intent(this, NotificationActivity::class.java)
-        intent.putExtra("objetivo", objetivo)
+        intent.putExtra("OBJETIVO", objetivo)
         startActivity(intent)
     }
 }
