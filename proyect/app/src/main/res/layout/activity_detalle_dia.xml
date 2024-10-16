@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondodeta"
     tools:context=".view.DetalleDiaActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,29 +22,55 @@
             <!-- Título del día -->
             <TextView
                 android:id="@+id/diaTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Planificación para Lunes"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
-                android:paddingBottom="16dp" />
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:padding="12dp"
+                android:paddingBottom="16dp"
+                android:shadowColor="@color/color43"
+                android:shadowDx="5"
+                android:shadowDy="12"
+                android:shadowRadius="10"
+                android:text="Planificación para Lunes"
+                android:textAlignment="center"
+                android:textColor="@color/color48"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- Sección de Desayuno -->
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevan"
+                android:paddingTop="8dp"
+                android:textColor="@color/color31"
+                android:text="DESAYUNO"
+                android:textSize="20sp"
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/desayunoTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desayuno:"
+                android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp"/>
 
             <ImageView
                 android:id="@+id/desayunoImageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/desayunoIngredientesTextView"
@@ -50,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ingredientes: "
                 android:textSize="16sp"
-                android:paddingBottom="4dp" />
+                android:paddingBottom="10dp" />
 
             <TextView
                 android:id="@+id/desayunoPreparacionTextView"
@@ -62,19 +90,32 @@
 
             <!-- Sección de Merienda -->
             <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevan"
+                android:paddingTop="8dp"
+                android:textColor="@color/color31"
+                android:text="MERIENDA"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
                 android:id="@+id/meriendaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Merienda:"
                 android:textSize="20sp"
+                android:textAlignment="center"
                 android:textStyle="bold"
-                android:paddingTop="8dp" />
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp"/>
 
             <ImageView
                 android:id="@+id/meriendaImageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/meriendaIngredientesTextView"
@@ -82,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ingredientes: "
                 android:textSize="16sp"
-                android:paddingBottom="4dp" />
+                android:paddingBottom="10dp" />
 
             <TextView
                 android:id="@+id/meriendaPreparacionTextView"
@@ -94,10 +135,22 @@
 
             <!-- Sección de Almuerzo -->
             <TextView
+                android:id="@+id/textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevan"
+                android:paddingTop="8dp"
+                android:textColor="@color/color31"
+                android:text="ALMUERZO"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
                 android:id="@+id/almuerzoTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
                 android:text="Almuerzo:"
+                android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:paddingTop="8dp" />
@@ -106,6 +159,7 @@
                 android:id="@+id/almuerzoImageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:paddingBottom="10dp"
                 android:scaleType="centerCrop" />
 
             <TextView
@@ -114,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ingredientes: "
                 android:textSize="16sp"
-                android:paddingBottom="4dp" />
+                android:paddingBottom="10dp" />
 
             <TextView
                 android:id="@+id/almuerzoPreparacionTextView"
@@ -126,19 +180,31 @@
 
             <!-- Sección de Cena -->
             <TextView
+                android:id="@+id/textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevan"
+                android:paddingTop="8dp"
+                android:textColor="@color/color31"
+                android:text="CENA"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
                 android:id="@+id/cenaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cena:"
+                android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:paddingTop="8dp" />
-
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp"/>
             <ImageView
                 android:id="@+id/cenaImageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/cenaIngredientesTextView"
@@ -146,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:text="Ingredientes: "
                 android:textSize="16sp"
-                android:paddingBottom="4dp" />
+                android:paddingBottom="10dp" />
 
             <TextView
                 android:id="@+id/cenaPreparacionTextView"
@@ -159,11 +225,17 @@
             <!-- Botón para volver a Planificación -->
             <Button
                 android:id="@+id/volverAPlanificacionButton"
-                android:layout_width="wrap_content"
+                android:layout_width="245dp"
                 android:layout_height="wrap_content"
-                android:text="Volver a Planificación"
                 android:layout_gravity="center_horizontal"
-                android:paddingTop="16dp" />
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#96085897"
+                android:paddingTop="16dp"
+                android:text="Volver a Planificación"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
